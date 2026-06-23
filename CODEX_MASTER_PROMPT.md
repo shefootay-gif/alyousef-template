@@ -24,6 +24,10 @@ It can be used with:
 - ChatGPT
 - Claude
 - Gemini
+- - Kimi
+- Kimi K2
+- Kimi Researcher if useful
+- Kimi / Moonshot AI API if available
 - Any AI coding assistant
 - Any full-stack developer
 - Any software team
