@@ -23,7 +23,7 @@ The result must be easy to reuse for future projects.
 9. Add documentation.
 10. Test the project fully.
 11. Provide a final report.
-
+12. Perform a full security review and harden authentication, admin APIs, uploads, environment variables, validation, payments, and sensitive data handling.
 ## Branding and editable settings
 
 Make these values editable from one clear place and from the admin panel where possible:
@@ -249,3 +249,6 @@ Provide:
 - How to run
 - How to customize
 - Remaining recommendations
+- Security issues found
+- Security fixes applied
+- Remaining security recommendations
