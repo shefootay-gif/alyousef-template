@@ -24,7 +24,130 @@ The result must be easy to reuse for future projects.
 10. Test the project fully.
 11. Provide a final report.
 12. Perform a full security review and harden authentication, admin APIs, uploads, environment variables, validation, payments, and sensitive data handling.
-## Branding and editable settings
+13. Create or improve all required frontend pages and website sections according to the project type.
+14. Create or improve the backend structure, APIs, database models, validation, authentication, uploads, orders, settings, and admin protection.
+## Website pages and sections requirements
+
+Create or improve all website pages and sections required by `PROJECT_BRIEF.md`.
+
+The website should include the appropriate pages for the project type.
+
+For e-commerce projects, include or improve:
+
+- Home page
+- Shop / products page
+- Product details page
+- Categories page
+- Cart page
+- Checkout page
+- Order confirmation page
+- Track order page
+- Customer orders page
+- About page
+- Contact page
+- FAQ page if useful
+- Privacy Policy
+- Terms and Conditions
+- Return / Refund Policy
+
+For service or company websites, include or improve:
+
+- Home page
+- About page
+- Services page
+- Individual service details if needed
+- Projects / portfolio page if needed
+- Contact page
+- FAQ page
+- Privacy Policy
+- Terms and Conditions
+
+Homepage sections should be professional and complete:
+
+- Announcement bar if useful
+- Header / navigation
+- Hero section
+- Main services or product categories
+- Featured products or featured services
+- Benefits / why choose us
+- About summary
+- Trust indicators
+- Customer reviews or testimonials if useful
+- Contact call-to-action
+- Footer
+
+All pages must be:
+
+- Responsive
+- SEO-friendly
+- Easy to customize
+- Connected to centralized settings where possible
+- Free from broken routes
+- Free from placeholder text unless clearly intentional
+- Consistent with the project brand identity
+
+## Backend requirements
+
+Create or improve a clean backend according to the project needs and existing stack.
+
+Backend must include or improve:
+
+- API routing structure
+- Database models/schema
+- Server-side validation
+- Error handling
+- Authentication and authorization
+- Admin-only API protection
+- Settings API
+- File upload API
+- Products/services API when needed
+- Orders API when needed
+- Customers API when needed
+- Coupons/discounts API when needed
+- Shipping API when needed
+- Contact form API when needed
+- Payment API or payment placeholders when needed
+- Webhook handling if payment integrations exist
+- Logs and safe error responses
+- Environment variable usage
+
+For e-commerce projects, backend should support:
+
+- Product management
+- Category management
+- Product images
+- Product variants if useful
+- Stock / inventory fields
+- Cart or checkout flow support
+- Order creation
+- Order status management
+- Customer data
+- Shipping information
+- Coupon validation
+- Payment status tracking
+- Admin order management
+- Basic finance/order summary if useful
+
+For service/company projects, backend should support:
+
+- Services management
+- Contact form submissions
+- Admin settings
+- Uploaded images
+- SEO settings
+- Optional portfolio/projects management
+- Optional testimonials management
+
+Backend rules:
+
+- Do not expose secrets.
+- Do not trust frontend input.
+- Validate all incoming data.
+- Protect admin APIs.
+- Use ORM-safe or parameterized database queries.
+- Keep API responses clean and consistent.
+- Do not leak stack traces or sensitive server details.
+- Keep backend structure reusable for future projects.## Branding and editable settings
 
 Make these values editable from one clear place and from the admin panel where possible:
 
@@ -252,3 +375,8 @@ Provide:
 - Security issues found
 - Security fixes applied
 - Remaining security recommendations
+  - Frontend pages created or improved
+- Backend APIs created or improved
+- Database/schema changes
+- Admin panel changes
+- API/security validation added
