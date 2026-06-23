@@ -1,9 +1,33 @@
 {
-  "name": "alyousef-template",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "brief": "node scripts/create-project-brief.js"
-  }
+"name": "universal-website-development-template",
+"version": "1.0.0",
+"description": "A reusable universal website development template powered by PROJECT_BRIEF.md and CODEX_MASTER_PROMPT.md.",
+"private": true,
+"type": "module",
+"scripts": {
+"brief": "node scripts/create-project-brief.js",
+"check": "echo "No check command configured yet"",
+"lint": "echo "No lint command configured yet"",
+"test": "echo "No tests configured yet""
+},
+"keywords": [
+"website-template",
+"ai-coding",
+"codex",
+"cursor",
+"copilot",
+"chatgpt",
+"claude",
+"gemini",
+"kimi",
+"moonshot-ai",
+"project-brief",
+"web-development",
+"ecommerce",
+"admin-panel",
+"arabic",
+"english"
+],
+"author": "Sherif Ahmed",
+"license": "MIT"
 }
