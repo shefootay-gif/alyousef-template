@@ -113,7 +113,106 @@ Documentation must explain:
 - Logo customization
 - Branding customization
 - How to reuse as a template
-- Troubleshooting
+-- Troubleshooting
+
+## Security requirements
+
+Apply a professional security review and hardening pass.
+
+### Environment and secrets
+- Never commit real secrets, API keys, passwords, tokens, database URLs, JWT secrets, payment keys, or private credentials.
+- Keep only safe placeholders in `.env.example`.
+- Ensure `.env`, `.env.local`, `.env.production`, and private config files are ignored by Git.
+- Validate that no secrets are hardcoded in frontend or backend code.
+
+### Authentication and authorization
+- Protect admin routes and admin APIs.
+- Ensure only authenticated admin users can access dashboard, settings, products, orders, customers, coupons, finance, integrations, and upload APIs.
+- Do not rely only on frontend route hiding for security.
+- Enforce permissions on the backend/API level.
+- Use secure sessions or JWT handling.
+- Use strong password hashing if password login exists.
+- Add safe logout/session expiration behavior where applicable.
+
+### Input validation
+- Validate all user inputs on the backend.
+- Sanitize text fields where needed.
+- Validate emails, URLs, phone numbers, colors, image paths, prices, quantities, and IDs.
+- Reject invalid or unexpected payloads.
+- Do not trust frontend validation only.
+
+### File upload security
+- Allow only safe image file types.
+- Validate MIME type and file extension.
+- Validate actual file signature when possible.
+- Limit upload file size.
+- Store uploaded files in a safe public uploads directory or configured storage.
+- Never allow executable file uploads.
+- Generate safe random filenames.
+- Prevent path traversal attacks.
+- Store only file URL/path in settings, not large Base64 strings.
+
+### API security
+- Add proper error handling without leaking stack traces or sensitive server details.
+- Add rate limiting for login, upload, webhooks, and sensitive endpoints where possible.
+- Add request body size limits.
+- Check CORS/trusted origins.
+- Validate webhook signatures if payment or external integrations exist.
+- Use HTTPS-ready configuration for production.
+
+### Database security
+- Use parameterized queries or ORM-safe queries.
+- Avoid raw SQL unless necessary and safe.
+- Validate IDs and ownership before reading/updating/deleting records.
+- Protect admin-only tables and operations.
+- Do not expose internal database fields unnecessarily.
+
+### Frontend security
+- Avoid rendering unsafe HTML.
+- Prevent XSS by escaping user-generated content.
+- Do not expose admin-only data in public frontend bundles.
+- Do not store sensitive tokens in localStorage unless there is no safer option.
+- Handle errors without showing sensitive information.
+
+### HTTP security headers
+Add or verify security headers where the stack supports them:
+- Content-Security-Policy if practical
+- X-Content-Type-Options
+- X-Frame-Options or frame-ancestors
+- Referrer-Policy
+- Permissions-Policy
+- Strict-Transport-Security in production HTTPS
+- SameSite and Secure cookies for sessions
+
+### Payments and orders
+If payment integration exists:
+- Never trust payment status from the frontend.
+- Verify payment status server-side.
+- Validate webhook signatures.
+- Validate payment amount and currency.
+- Store payment transactions safely.
+- Avoid exposing payment secrets.
+
+### Admin settings security
+- Only admins can update site settings.
+- Validate settings before saving.
+- Prevent malicious URLs or scripts in settings fields.
+- Validate tracking pixel IDs.
+- Validate social links and contact links.
+- Ensure saved settings cannot inject unsafe scripts into the frontend.
+
+### Security testing
+After changes, verify:
+- Admin pages are not accessible without login.
+- Admin APIs reject unauthenticated users.
+- Upload rejects invalid files.
+- Invalid settings payloads are rejected.
+- No secrets exist in repository.
+- `.env` files are ignored.
+- Build output does not expose private data.
+- Console and server logs do not leak sensitive information.
+
+If any security issue cannot be fully fixed due to project limitations, explain the limitation clearly and propose the safest practical solution.
 
 ## Testing
 
