@@ -26,6 +26,16 @@ The result must be easy to reuse for future projects.
 12. Perform a full security review and harden authentication, admin APIs, uploads, environment variables, validation, payments, and sensitive data handling.
 13. Create or improve all required frontend pages and website sections according to the project type.
 14. Create or improve the backend structure, APIs, database models, validation, authentication, uploads, orders, settings, and admin protection.
+15. Improve UI/UX, responsive design, RTL support, loading states, and reusable components.
+16. Add or improve SEO, metadata, page titles, descriptions, Open Graph, sitemap, and robots support where practical.
+17. Improve performance, image handling, bundle size, backend query efficiency, and loading behavior.
+18. Improve accessibility, semantic HTML, forms, contrast, keyboard navigation, and alt text.
+19. Improve database/data management, schema structure, migrations, settings, and safe storage.
+20. Add or improve e-commerce features when the project type requires them.
+21. Prepare deployment documentation, environment variables, build/start commands, and production notes.
+22. Add safe logging and monitoring readiness.
+23. Improve testing and QA coverage.
+24. Keep the project maintainable, scalable, reusable, and easy to customize.
 ## Website pages and sections requirements
 
 Create or improve all website pages and sections required by `PROJECT_BRIEF.md`.
@@ -171,7 +181,186 @@ Make these values editable from one clear place and from the admin panel where p
 - SEO description
 - Images/banners
 - Button texts
+## UI/UX requirements
 
+Create or improve the user interface and user experience according to the project brief.
+
+Requirements:
+- Use a clean, modern, professional layout.
+- Keep the design consistent with the brand identity.
+- Make the website easy to navigate.
+- Use clear buttons and call-to-actions.
+- Keep spacing, typography, colors, and components consistent.
+- Support Arabic and English layouts where needed.
+- Support RTL layout for Arabic.
+- Make mobile experience excellent.
+- Avoid cluttered sections.
+- Use reusable UI components.
+- Keep admin UI simple, clear, and practical.
+- Add loading, empty, success, and error states where needed.
+
+## SEO requirements
+
+Create or improve SEO foundations.
+
+Requirements:
+- Add proper page titles.
+- Add meta descriptions.
+- Add SEO-friendly headings.
+- Add Open Graph metadata where practical.
+- Use clean URLs.
+- Use semantic HTML.
+- Add alt text for important images.
+- Create or improve sitemap if the stack supports it.
+- Create or improve robots.txt if needed.
+- Avoid duplicate page titles and descriptions.
+- Make SEO fields editable from settings/admin where practical.
+
+## Performance requirements
+
+Improve performance without breaking the project.
+
+Requirements:
+- Optimize images where practical.
+- Avoid unnecessary large dependencies.
+- Split reusable components when useful.
+- Avoid repeated heavy logic.
+- Keep frontend bundle reasonable.
+- Lazy-load heavy sections/images when practical.
+- Reduce unnecessary re-renders.
+- Cache or memoize where useful.
+- Keep backend queries efficient.
+- Avoid loading admin data on public pages.
+- Ensure build works without performance warnings where possible.
+
+## Accessibility requirements
+
+Improve accessibility basics.
+
+Requirements:
+- Use semantic HTML.
+- Add labels for forms.
+- Add alt text for images.
+- Ensure buttons and links are keyboard accessible.
+- Keep good color contrast.
+- Avoid clickable divs where buttons/links should be used.
+- Add focus states where practical.
+- Use clear error messages.
+- Make forms understandable.
+- Support screen-reader friendly structure where practical.
+
+## Database and data management requirements
+
+Create or improve database/data structure according to the project needs.
+
+Requirements:
+- Keep database schema clean and understandable.
+- Use clear table/model names.
+- Use migrations if the stack supports them.
+- Add createdAt and updatedAt where useful.
+- Add soft delete/status fields where useful.
+- Validate data before saving.
+- Avoid duplicated data structures.
+- Keep settings centralized.
+- Keep product/service/order/customer data structured.
+- Do not store secrets in the database unless encrypted or required safely.
+- Do not store large Base64 images in database fields.
+
+## E-commerce requirements
+
+If the project is e-commerce, create or improve:
+
+- Product listing
+- Product details
+- Product categories
+- Product images
+- Product price
+- Product discount/sale price if needed
+- Product stock/inventory
+- Cart
+- Checkout
+- Order creation
+- Order confirmation
+- Order tracking
+- Admin product management
+- Admin order management
+- Customer information
+- Shipping information
+- Coupons/discounts
+- Payment status
+- Basic finance/order summary
+- Return/refund policy page
+- Terms and privacy pages
+
+Rules:
+- Never trust cart totals from frontend only.
+- Recalculate totals server-side where possible.
+- Validate prices, quantities, discounts, shipping, and payment status.
+- Keep checkout simple and clear.
+- Keep order status manageable from admin.
+
+## Deployment requirements
+
+Prepare the project for deployment.
+
+Requirements:
+- Update README with deployment steps.
+- Keep `.env.example` complete and safe.
+- Explain required environment variables.
+- Ensure build command is documented.
+- Ensure start/preview command is documented.
+- Avoid hardcoded localhost URLs.
+- Use environment variables for API URLs and secrets.
+- Mention deployment target recommendations.
+- Ensure uploaded files/storage behavior is explained.
+- Add production notes for security and database.
+
+## Monitoring and logging requirements
+
+Add or improve safe logs and basic monitoring readiness.
+
+Requirements:
+- Log important backend errors safely.
+- Do not log secrets, passwords, tokens, payment keys, or private data.
+- Use clear error messages for developers.
+- Use safe error messages for users.
+- Add useful admin feedback for failed actions.
+- Keep logs production-safe.
+- Mention monitoring recommendations in the final report.
+
+## Testing and QA requirements
+
+Improve testing and quality checks.
+
+Requirements:
+- Run available install, type-check, lint, build, and test commands.
+- Manually verify public pages.
+- Manually verify admin pages.
+- Verify forms.
+- Verify uploads.
+- Verify settings save.
+- Verify logo change.
+- Verify responsive layout.
+- Verify no broken routes.
+- Verify no broken images.
+- Verify no console errors.
+- Report any command that fails and explain why.
+
+## Maintenance and scalability requirements
+
+Keep the project easy to maintain and scale.
+
+Requirements:
+- Keep folder structure clear.
+- Keep reusable components.
+- Keep utilities separate.
+- Keep types/interfaces clear.
+- Avoid duplicated logic.
+- Avoid hardcoded project-specific content.
+- Keep settings and branding centralized.
+- Make future customization easy.
+- Document important decisions.
+- Suggest improvements for future versions.
 ## Logo and image rules
 
 - Support image upload or image URL.
@@ -380,3 +569,13 @@ Provide:
 - Database/schema changes
 - Admin panel changes
 - API/security validation added
+- UI/UX improvements
+- SEO improvements
+- Performance improvements
+- Accessibility improvements
+- Database/data changes
+- E-commerce features added or improved
+- Deployment notes
+- Monitoring/logging notes
+- QA/testing summary
+- Maintenance and scalability recommendations
