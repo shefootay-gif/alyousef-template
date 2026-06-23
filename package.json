@@ -1,0 +1,9 @@
+{
+  "name": "alyousef-template",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "brief": "node scripts/create-project-brief.js"
+  }
+}
